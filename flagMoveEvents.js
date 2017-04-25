@@ -2,16 +2,18 @@ let mouse = {x: 0, y: 0};
 let targetCanvas = true;
 let timeout;
 
-let bannerCanvas = document.querySelector('canvas');
-let headlineText = document.querySelector('.headlineText')
-let headline = document.querySelector('.headline')
+let flagContainerCanvas = document.querySelector('canvas');
+let headlineText = document.querySelector('.headlineText');
+let headline = document.querySelector('.headline');
+let flagContainerRef = document.getElementById('flagContainer');
 
 function onMouseMove(event) {
-	if (event.target !== bannerCanvas) return;
+	// console.log(flagContainer);
+	if (event.target !== flagContainerCanvas) return;
 	// get mouse position
 	event.preventDefault();
-	mouse.x = ((event.clientX - banner.offsetLeft) / banner.clientWidth) * 2 - 1;
-	mouse.y = - ((event.clientY - banner.offsetTop) / banner.clientHeight) * 2 + 1;
+	mouse.x = ((event.clientX - flagContainer.offsetLeft) / flagContainer.clientWidth) * 2 - 1;
+	mouse.y = - ((event.clientY - flagContainer.offsetTop) / flagContainer.clientHeight) * 2 + 1;
 	// attach mouse position to vector3
 	let vector = new THREE.Vector3(mouse.x, mouse.y, 0);
 	vector.unproject(camera);
@@ -29,17 +31,6 @@ function onMouseMove(event) {
 	clearTimeout(timeout);
 	timeout = setTimeout(function() { onMouseOut();  }, 200);
 }
-
-// let descriptions = [
-// 	'Digital <br> Designer',
-// 	// 'Web <br> Developer',
-// 	// 'Visual <br> Designer',
-// 	'VR <br> Enthusiast'
-// 	// 'Paper <br> Engineer'
-// 	// 'Motion <br> Designer'
-// 	// 'Analytical <br> Observer'
-// ]
-
 
 // ease out ball position z
 function onMouseOut() {
@@ -70,9 +61,9 @@ function touchHandler(event) {
 }
 
 // mouse and touch handlers
-document.addEventListener('mousemove', onMouseMove, false);
-document.getElementById('banner').addEventListener("touchstart", touchHandler, true);
-document.getElementById('banner').addEventListener("touchmove", touchHandler, true);
-document.getElementById('banner').addEventListener("touchend", touchHandler, true);
-document.getElementById('banner').addEventListener("touchcancel", touchHandler, true);
+flagContainerRef.addEventListener('mousemove', onMouseMove, false);
+flagContainerRef.addEventListener("touchstart", touchHandler, true);
+flagContainerRef.addEventListener("touchmove", touchHandler, true);
+flagContainerRef.addEventListener("touchend", touchHandler, true);
+flagContainerRef.addEventListener("touchcancel", touchHandler, true);
 

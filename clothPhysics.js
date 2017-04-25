@@ -16,7 +16,7 @@ let MASS = 0.3;
 let restDistance = 25;
 
 let xSegs = 18;
-let ySegs = 10;
+let ySegs = 7;
 
 let clothFunction = plane( restDistance * xSegs, restDistance * ySegs );
 

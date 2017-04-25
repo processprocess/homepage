@@ -14,15 +14,15 @@ init();
 animate();
 
 function init() {
-  let banner = document.querySelector('#banner');
+  let flagContainer = document.querySelector('#flagContainer');
 
   scene = new THREE.Scene();
 
   // camera
-  camera = new THREE.PerspectiveCamera( 30, banner.clientWidth / banner.clientHeight, 1, 2000 );
+  camera = new THREE.PerspectiveCamera( 30, flagContainer.clientWidth / flagContainer.clientHeight, 1, 2000 );
   camera.position.x = 0;
-  camera.position.y = 235; // distance from cloth
-  camera.position.z = 500; // rotation around cloth put back at 500
+  camera.position.y = 155;
+  camera.position.z = 525;
   scene.add( camera );
 
   // lights
@@ -39,12 +39,6 @@ function init() {
 
   light.shadow.mapSize.width = 1024;
   light.shadow.mapSize.height = 1024;
-  // let d = 300;
-  // light.shadow.camera.left = - d;
-  // light.shadow.camera.right = d;
-  // light.shadow.camera.top = d;
-  // light.shadow.camera.bottom = - d;
-  // light.shadow.camera.far = 1000;
   scene.add( light );
 
   let popLight = new THREE.PointLight( 0x0000ff, 1.75 );
@@ -58,7 +52,7 @@ function init() {
   // cloth material
 
   let loader = new THREE.TextureLoader();
-  let clothTexture = loader.load( 'images/banner-grey.png' );
+  let clothTexture = loader.load( 'images/flag.png' );
   clothTexture.minFilter = THREE.LinearFilter;
   clothTexture.flipY = true;
   clothTexture.anisotropy = 16;
@@ -112,62 +106,41 @@ function init() {
 
   renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( banner.clientWidth, banner.clientHeight );
+  renderer.setSize( flagContainer.clientWidth, flagContainer.clientHeight );
   renderer.setClearColor(0xffffff, 0);
-
-  banner.appendChild( renderer.domElement );
-
+  flagContainer.appendChild( renderer.domElement );
   renderer.gammaInput = true;
   renderer.gammaOutput = true;
-
   renderer.shadowMap.enabled = true;
-
-  //
 
   window.addEventListener( 'resize', onWindowResize, false );
 
 }
 
-//
-
 function onWindowResize() {
-	camera.aspect = banner.clientWidth / banner.clientHeight;
+	camera.aspect = flagContainer.clientWidth / flagContainer.clientHeight;
 	camera.updateProjectionMatrix();
-	renderer.setSize( banner.clientWidth, banner.clientHeight );
+	renderer.setSize( flagContainer.clientWidth, flagContainer.clientHeight );
 }
 
-//
-
 function animate() {
-
   requestAnimationFrame( animate );
-
   let time = Date.now();
-
   windStrength = Math.cos( time / 7000 ) * 1 + 1;
   windForce.set( Math.sin( time / 2000 ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) ).normalize().multiplyScalar( windStrength );
-
   simulate( time );
   render();
-
 }
 
 function render() {
-
   let p = cloth.particles;
-
   for ( let i = 0, il = p.length; i < il; i ++ ) {
-
     clothGeometry.vertices[ i ].copy( p[ i ].position );
-
   }
-
   clothGeometry.computeFaceNormals();
   clothGeometry.computeVertexNormals();
-
   clothGeometry.normalsNeedUpdate = true;
   clothGeometry.verticesNeedUpdate = true;
-
   renderer.render( scene, camera );
-
 }
+
