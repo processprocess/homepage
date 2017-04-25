@@ -9,15 +9,16 @@ body {
   background: #000;
   color: #B8BBC5;
   transition: .2s;
-  /*margin-bottom: 10em;*/
 }
 
-h1 {
-  margin: 0;
-  font-family: 'helvetica Neue';
-  font-weight: 500;
-  font-size: 3em;
-  line-height: .9;
+/*.contentWrapper {
+  width: 100%;
+}*/
+
+.topRule {
+ width: 100%;
+ height: 3px;
+ background: #B8BBC5;
 }
 
 p {
@@ -36,9 +37,7 @@ a:active,
 a:hover,
 a::before,
 a::after,
-#lightswitch:hover
-{
-  /*background: rgb(255, 0, 176);*/
+#lightswitch:hover {
   color: rgb(255, 0, 176);
 }
 
@@ -60,7 +59,6 @@ a::after,
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  /*border: 1px solid red;*/
 }
 
 .topItem {
@@ -70,13 +68,11 @@ a::after,
 
 #wrapper {
   margin: 0 auto;
-  width: 100%;
-  max-width: 780px;
-  /*height: 100vh;*/
+  width: 780px;
+  /*max-width: 780px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*border: .2px solid rgba(255, 0, 0, .5);*/
 }
 
 #banner {
@@ -84,17 +80,17 @@ a::after,
   margin-top: 3em;
   height: 50vw;
   width: 100%;
-  /*border: .2px solid rgba(0, 0, 255, .5);*/
 }
 
-#bannerBorder {
+/*#bannerBorder {
   border-top: 3px solid #B8BBC5;
   width: 80%;
-}
+}*/
 
-#nameDescription {
-  padding: 2.5em 0;
-  width: 80%;
+.nameDescription {
+  font-size: 3em;
+  line-height: 1em;
+  padding: .75em 0;
 }
 
 .fadeOut {
@@ -103,12 +99,11 @@ a::after,
 }
 
 .description {
-  width: 80%;
+  width: 100%;
   font-weight: 500;
   font-size: 1.8em;
   line-height: 1.4em;
   letter-spacing: .3px;
-  /*border: 1px solid red;*/
 }
 
 .description img {
@@ -119,20 +114,18 @@ a::after,
 
 #skills {
   padding: 1.2em 0 1em 0;
-  width: 80%;
+  width: 100%;
 }
 
 #cardsWrapper {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /*border: 1px solid rgba(255, 255, 255, .2);*/
 }
 
 .card {
   width: 50%;
   padding: 0 1em 1em 0;
-  /*border: 1px solid rgba(255, 255, 255, .2);*/
 }
 
 .iconHolder {
@@ -145,7 +138,6 @@ a::after,
   letter-spacing: .5px;
   /*padding-left: 0.25em;*/
   display: inline;
-  /*border: 1px solid rgba(255, 255, 255, .2);*/
 }
 
 .card ul {
@@ -194,8 +186,6 @@ a::after,
  margin: 30px 0;
 }
 
-/*border-top: 3px solid #B8BBC5;*/
-
 /*/////////// footer ///////////*/
 
 footer {
@@ -205,57 +195,25 @@ footer {
   margin-top: 4em;
   padding: .5em;
   bottom: 0px;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-/*-------------*/
-/*media queries*/
-/*-------------*/
+/*/////////// media queries ///////////*/
 
-/*very large screen*/
-@media (min-width:900px) {
-  #bannerBorder {
-    width: 100%;
+@media (max-width:900px) {
+  .nameDescription {
+    font-size: 2em;
+    line-height: 1em;
+    padding: .75em 0;
   }
-  #nameDescription {
-    width: 100%;
-  }
-  #banner {
-    height: 600px;
-  }
-  .description {
-    width: 100%;
-  }
-  #skills {
-    width: 100%;
-  }
-  #cardsWrapper {
-    width: 100%;
-  }
-  footer {
-    width: 100%;
+  #wrapper{
+    width: 80%
   }
 }
 
-/*medium screen*/
-@media (min-width:1400px) {
-  #nameDescription {
-    padding: 3em 0;
-    font-size: 1.2em;
-  }
-  #banner {
-    height: 800px;
-    margin-top: 15px;
-  }
-  .card {
-    padding-bottom: 2em;
-    /*border: .2px solid rgba(255, 0, 0, .5);*/
-  }
-}
-
-/*very narrow screen*/
+/* mobile portrait */
 @media (max-width:550px) {
   #topContact {
     display: none;
@@ -266,47 +224,35 @@ footer {
   .card {
     width: 100%;
     padding-bottom: 2em;
-    /*border: .2px solid rgba(255, 0, 0, .5);*/
   }
 }
 
-/*landscape screen*/
+/* mobile landscape */
 @media screen and (orientation:landscape) and (max-height:400px) {
   #topContact {
     display: none;
   }
   #banner {
     margin-top: -2em;
-  }
-  #bannerBorder {
-    margin-top: -3em;
-    /*border-top: 3px solid #B8BBC5;*/
-    width: 80%
-  }
-  #nameDescription {
-    /*padding: 0em 0;*/
+    margin-bottom: -2em;
   }
   .card {
     width: 100%;
     padding-bottom: 2em;
-    /*border: .2px solid rgba(255, 0, 0, .5);*/
   }
 }
 
-/*-------------*/
-/*--bodymovin--*/
-/*-------------*/
+/*/////////// bodymovin ///////////*/
 
 .botas_loop_3,.botas_loop_2{
   display:none
 }
 
-#bodymovin {
+/*#bodymovin {
   width:100px;
   height:100px;
   display:block;
   overflow: hidden;
   margin: auto;
   opacity: 1;
-  /*border: 1px solid rgba(255,255,255,.3)*/
-}
+}*/
