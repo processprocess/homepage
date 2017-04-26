@@ -13,8 +13,16 @@ body {
 
 .topRule {
  width: 100%;
- height: 3px;
+ height: 7px;
  background: #B8BBC5;
+ margin-bottom: 2em;
+}
+
+.smallRule {
+  width: 100%;
+  height: 1px;
+  background: #B8BBC5;
+  margin-top: 1.5em;
 }
 
 p {
@@ -55,6 +63,7 @@ a::after,
   display: flex;
   justify-content: space-between;
   font-weight: 400;
+  /*border: thin white solid;*/
 }
 
 .topItem {
@@ -67,7 +76,7 @@ a::after,
   width: 780px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
 }
 
 #flagContainer {
@@ -78,27 +87,41 @@ a::after,
   width: 100%;
 }
 
-.nameDescription {
-  font-size: 2.25em;
-  line-height: 1em;
-  padding: .75em 0;
-}
-
 .fadeOut {
   color: purple;
   opacity: 0;
 }
 
 .description {
-  width: 100%;
-  font-weight: 500;
+  /*width: 100%;*/
+  /*font-weight: 500;
   font-size: 1.8em;
   line-height: 1.4em;
-  letter-spacing: .3px;
+  letter-spacing: .3px;*/
 }
 
-.description img {
-  width: 100%;
+.nameDescription {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1em;
+  /*padding: .75em 0;*/
+}
+
+.descriptionCopy{
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: .02em;
+  /*padding-bottom: 3em;*/
+}
+
+.skills {
+  font-size: 1.75em;
+  font-weight: 200;
+  /*line-height: 1em;*/
+  /*padding: 1.75em 0;*/
+  margin-bottom: 1.5em;
+  letter-spacing: .03em;
 }
 
 /*/////////// skills ///////////*/
@@ -146,14 +169,104 @@ a::after,
 
 .postWrapper {
   width: 100%;
+  /*margin-bottom: 40px;*/
 }
 
-.rule {
+.postWrapper img {
+  width: 100%;
+}
+
+.bannerRule {
  width: 100%;
  height: 3px;
  background: #B8BBC5;
  position: relative;
- margin: 30px 0;
+ margin-bottom: 5.5em;
+}
+
+.logoImage {
+  width:100%;
+  margin-bottom: 3.5em;
+}
+
+.catchLine {
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: .05em;
+  font-size: 1.5em;
+  opacity: .5;
+}
+
+.subHead {
+  font-weight: 300;
+  margin-top: .5em;
+  letter-spacing: .05em;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+.links{
+  display:flex;
+  margin-top: 2em;
+  width: 50%;
+}
+
+.link {
+  flex: 1;
+  text-align: center;
+  transition: .2s all;
+  font-size: 1.25em;
+  font-weight: 300;
+  letter-spacing: .1em;
+  padding: .5em .2em;
+  margin-right: 1em;
+  border: thin #B8BBC5 solid;
+  display: inline;
+}
+
+.link:last-child {
+  margin-right: 0em;
+}
+
+.link:hover {
+  border: thin rgb(255, 0, 176) solid;
+  color: rgb(255, 0, 176)
+}
+
+.bodyCopy {
+  /*color: white;*/
+  padding-bottom: .5em;
+  letter-spacing: .09em;
+  font-weight: 300;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin: 2em 0;
+}
+
+.bodyCopy a {
+  border-bottom: 1px solid #B8BBC5;
+}
+
+.bodyCopy a:hover {
+  border-bottom: 1px solid rgb(255, 0, 176);
+}
+
+.ccWrapper{
+  width: 30px;
+  margin-top: -1em;
+  margin-bottom: 2em;
+}
+
+.postWrapper > .card{
+  margin-top: 2em;
+  padding: 0;
+}
+
+.phoneStack {
+  position: relative;
+  margin-top: -4em;
+  margin-bottom: 2em;
+  z-index: -1;
 }
 
 /*/////////// footer ///////////*/
@@ -173,9 +286,9 @@ footer {
 
 @media (max-width:900px) {
   .nameDescription {
-    font-size: 1.75em;
+    font-size: 2.5em;
     line-height: 1em;
-    padding: .75em 0;
+    /*padding: .75em 0;*/
   }
   #wrapper{
     width: 80%
@@ -183,9 +296,17 @@ footer {
 }
 
 /* mobile portrait */
-@media (max-width:550px) {
+@media (max-width:650px) {
+  #name, #phone, #instagram, #github {
+  /*#topContact {*/
+    /*display: none;*/
+  }
   #topContact {
-    display: none;
+    /*left:0;*/
+    /*position: fixed;*/
+    /*display: block;*/
+    /*border: thin white solid;*/
+    /*justify-content: space-around;*/
   }
   #flagContainer {
     margin-top: 15px;
@@ -194,6 +315,23 @@ footer {
   .card {
     width: 100%;
     padding-bottom: 2em;
+  }
+  .bannerRule {
+   margin-bottom: 3em;
+  }
+  .logoImage {
+    margin-bottom: 2em;
+  }
+  .links{
+    width: 100%;
+  }
+  .phoneStack {
+    position: relative;
+    margin-top: -1em;
+    z-index: -1;
+  }
+  .bodyCopy {
+    font-size: 1em;
   }
 }
 
@@ -209,6 +347,9 @@ footer {
   .card {
     width: 100%;
     padding-bottom: 2em;
+  }
+  .links{
+    width: 100%;
   }
 }
 

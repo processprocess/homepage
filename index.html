@@ -15,34 +15,99 @@
 		<div id="flagContainer"></div>
 
 		<div id="topContact">
+			<div class="topItem" id='aboutButton'><a>About</a></div>
 			<div class="topItem" id='name'><a href="mailto:phil@philipbell.org" target="_top">phil@philipbell.org</a></div>
 			<div class="topItem" id='phone'>(401) 473-8531</div>
-			<div class="topItem" id='phone'><a href="https://instagram.com/philiphunterbell" target="new">Instagram</a></div>
-			<div class="topItem" id='github'><a href="https://github.com/processprocess" target="new">github</a></div>
+			<div class="topItem" id='instagram'><a href="https://instagram.com/philiphunterbell" target="_blank">Instagram</a></div>
+			<div class="topItem" id='github'><a href="https://github.com/processprocess" target="_blank">github</a></div>
 			<!-- <div class="topItem" id='lightswitch'>lightswitch</div> -->
 		</div>
 
 		<div id="wrapper">
 
-			<div class="description">
+			<div class="postWrapper">
+				<div class="bannerRule"></div>
+				<img src="./images/pictooptic/pictooptic-logo.png" class="logoImage" alt="pictooptic"></img>
+
+				<div class="catchLine">Type anything, see everything.</div>
+				<div class="subHead">Generative art with The Noun Project API.</div>
+
+				<div class="links">
+					<a class="link" href="http://www.pictooptic.com" target="_blank">Live Demo</a>
+					<a class="link" href="http://github.com/processprocess/pictooptic" target="_blank">Git Repo</a>
+				</div>
+
+				<div class="card">
+					<h3>Technology</h3>
+					<ul>
+						<li>The Noun Project API</li>
+						<li>Node.js</li>
+						<li>Express</li>
+						<li>Pixi.js</li>
+						<li>GreenSock</li>
+						<li>Bodymovin</li>
+						<li>Typeahead.js</li>
+					</ul>
+				</div>
+
+				<img class="phoneStack" src="images/pictooptic/iphone-pictooptic2.jpg"></img>
+
+				<div class="catchLine">Pictooptic is simple:</div>
+				<div class="subHead">Type a word, and see a composition from icons depicting the word.</div>
+
+				<div class="smallRule"></div>
+
+				<div class="bodyCopy">
+					Icons and pictograms have the goal of unifying communication. However, they are subjectively understood and oftentimes have multiple meanings. A symbol meaning "peace" in Buddhism has the opposite meaning in western society.
+					<br><br>
+					Words can be charged with multiple meanings as well. A search for "palm" within Pictooptic will return a composition of trees, hands and religious icons. Icons strive to communicate directly to the subconscious but are ultimately subjective.
+				</div>
+
+				<img src="images/pictooptic/ipad-pictooptic3.jpg"></img>
+
+				<div class="bodyCopy">
+					Pictooptic presents icons in a Rorschach-esque reflection. By abstracting icons through reflection we activate free-association within our creative mind. Within a search for "green" we may see the face of a boar emerge from the abstracted pattern. The icons for "green" will include frogs and leafs. It will also include conceptually related icons such as cars and lightbulbs.
+					<br><br>
+					These layers of abstraction stimulate passive creativity. It's subtly addictive like humming along to your favorite song.
+				</div>
+
+				<img src="images/pictooptic/ipad-pictooptic4.jpg"></img>
+
+				<div class="bodyCopy">
+					All Icons and data in Pictooptic are sourced from <a href="https://thenounproject.com/" target="_blank">The Noun Project</a>. All icon designers are credited within the information page of each search result. All graphics and code of Pictooptic are in the <a href="https://creativecommons.org/" target="_blank">Creative Commons</a>.
+					<br><br>
+					<a href="https://www.linkedin.com/pulse/pictooptic-type-anything-see-everything-philip-hunter-bell?trk=v-feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_all%3B9RmbJwa%2Fv%2BeVrhJkQ2deRQ%3D%3D/" target="_blank">More info on the development</a>
+				</div>
+
+				<div class="ccWrapper">
+					<a href="https://creativecommons.org/" target="_blank">
+						<img src="images/pictooptic/cc-icon.png"></img>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="description aboutMe">
 				<div class="topRule"></div>
 				<div class="nameDescription">
 					Philip Bell <br>
 					Visual Designer
 				</div>
-				Visual method collector and executor. <br>
-				With 8+ years experience in freelance and agency visual design work,
-				Illustrator and Photoshop are old friends. Text editors, Git and Node are new best pals.
-				<br><br>
-				I like to know all methods involved in a project.
-				This curiosity leads to a constantly cultivating range of abilities and skills.
-				If I'm not good at it today, I'm familiar enough to jump in and get my hands dirty.
-				<br><br>
-				I'm looking for those who share an unstoppable desire to creatively push themselves and others.
-				Digital or print. I'm ready to jump in.
+				<div class="bodyCopy">
+					Visual method collector and executor. <br>
+					With 8+ years experience in freelance and agency visual design work,
+					Illustrator and Photoshop are old friends. Text editors, Git and Node are new best pals.
+					<br><br>
+					I like to know all methods involved in a project.
+					This curiosity leads to a constantly cultivating range of abilities and skills.
+					If I'm not good at it today, I'm familiar enough to jump in and get my hands dirty.
+					<br><br>
+					I'm looking for those who share an unstoppable desire to creatively push themselves and others.
+					Digital or print. I'm ready to jump in.
+				</div>
 			</div>
 
-			<h1 id="skills">skills:</h1>
+			<div class="skills">Capabilities:</div>
 
 			<div id="cardsWrapper">
 				<div class="card" id="digital">
@@ -59,52 +124,41 @@
 					<div class="iconHolder" name="dev"></div>
 					<h3>Web Development</h3>
 					<ul>
-						<li>javascript ES6</li>
-						<li>responsive design</li>
-						<li>css3</li>
+						<li>JavaScript ES6</li>
+						<li>Responsive Design</li>
+						<li>CSS3</li>
 					</ul>
 				</div>
 				<div class="card" id="tech">
 					<div class="iconHolder" name="tech"></div>
 					<h3>Web Technologies</h3>
 					<ul>
-						<li>node js</li>
-						<li>a-frame webVR</li>
-						<li>three.js</li>
-						<li>react</li>
+						<li>Node.js</li>
+						<li>A-Frame WebVR</li>
+						<li>Three.js</li>
+						<li>React</li>
 					</ul>
 				</div>
 				<div class="card" id="motion">
 					<div class="iconHolder" name="motion"></div>
 					<h3>Motion Design</h3>
 					<ul>
-						<li>after effects</li>
-						<li>css animation</li>
-						<li>web svg animation</li>
-						<li>bodymovin</li>
+						<li>AfterEffects</li>
+						<li>CSS Animation</li>
+						<li>Web SVG Animation</li>
+						<li>Bodymovin</li>
 					</ul>
 				</div>
 				<div class="card" id="threeD">
 					<div class="iconHolder" name="threeD"></div>
 					<h3>3D Design</h3>
 					<ul>
-						<li>sketchup</li>
-						<li>makerbot</li>
-						<li>rhino</li>
-						<li>paper engineering</li>
+						<li>Sketchup</li>
+						<li>Makerbot</li>
+						<li>Rhino</li>
+						<li>Paper Engineering</li>
 					</ul>
 				</div>
-			</div>
-
-			<div class="postWrapper">
-				<div class="rule"></div>
-				<img src="./images/pictooptic/pictooptic-logo.png" alt="pictooptic"></img>
-				<div class="description feature">
-					Genereative graphics with The Noun Project API. <br/><br/>
-					<img src="images/pictooptic/pattern.jpg"></img><br/><br/>
-					<a href="http://www.pictooptic.com" target="_blank">Live Demo</a><br/>
-					<a href="http://github.com/processprocess/Pictooptic" target="_blank">Git Repo</a><br/>
-				</div><br/><br/><br/>
 			</div>
 
 			<footer>
@@ -120,6 +174,22 @@
 		<script src="flag.js"></script>
 		<script src="flagMoveEvents.js"></script>
 		<script src="lightSwitch.js"></script>
+		<script src="scrollTo.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-98123752-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 
 	</body>
 </html>
+<!--  -->
