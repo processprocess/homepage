@@ -37,14 +37,6 @@ a,
   cursor: pointer;
 }
 
-/*a:active,*/
-/*a:hover,*/
-/*a::before,
-a::after,*/
-/*#lightswitch:hover {
-  color: rgb(255, 0, 176);
-}*/
-
 ::selection {
   background:rgb(255, 0, 176);
   color: white;
@@ -59,8 +51,7 @@ a::after,*/
   left: 0px;
   right: 0px;
   position: fixed;
-  line-height: 0;
-  padding: 25px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-around;
   font-weight: 400;
@@ -69,9 +60,29 @@ a::after,*/
   z-index: 10;
 }
 
-.topItem {
-  /*border-bottom: 1px #B8BBC5 solid;*/
-  /*padding-bottom: .7em;*/
+.navItem {
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #B8BBC5;
+}
+/*.navItem a:hover,*/
+.navItem:hover {
+  border-bottom: 1px solid rgb(255, 0, 176);
+  color: rgb(255, 0, 176);
+}
+
+/*/////////// dissable hover on mobile ///////////*/
+
+@media (hover: none) {
+   .linkButton:hover {
+     border: thin #B8BBC5 solid;
+     color: #B8BBC5;
+   }
+   .navItem:hover,
+   .bodyCopy a:hover {
+     border-bottom: 1px solid #B8BBC5;
+     color: #B8BBC5;
+   }
 }
 
 #wrapper {
@@ -110,18 +121,28 @@ a::after,*/
 }
 
 .description {
-  /*width: 100%;*/
-  /*font-weight: 500;
-  font-size: 1.8em;
-  line-height: 1.4em;
-  letter-spacing: .3px;*/
 }
 
 .nameDescription {
   font-size: 3em;
   font-weight: 500;
   line-height: 1em;
-  /*padding: .75em 0;*/
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1em;
+  margin-top: .25em;
+  letter-spacing: .02em;
+  opacity: .5;
+}
+
+.tick {
+  width: 15px;
+  height: 5px;
+  background: #B8BBC5;
+  margin-bottom: 2em;
 }
 
 .descriptionCopy{
@@ -129,14 +150,11 @@ a::after,*/
   font-weight: 500;
   line-height: 1.3em;
   letter-spacing: .02em;
-  /*padding-bottom: 3em;*/
 }
 
 .skills {
   font-size: 1.75em;
   font-weight: 200;
-  /*line-height: 1em;*/
-  /*padding: 1.75em 0;*/
   margin-bottom: 1.5em;
   letter-spacing: .03em;
 }
@@ -152,6 +170,7 @@ a::after,*/
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2.5em;
 }
 
 .card {
@@ -224,13 +243,13 @@ a::after,*/
   line-height: 1.25em;
 }
 
-.links{
+.linkButtons{
   display:flex;
   margin-top: 2em;
   width: 50%;
 }
 
-.link {
+.linkButton {
   flex: 1;
   text-align: center;
   transition: .2s all;
@@ -243,13 +262,13 @@ a::after,*/
   display: inline;
 }
 
-.link:last-child {
+.linkButton:last-child {
   margin-right: 0em;
 }
 
-.link:hover {
+.linkButton:hover {
   border: thin rgb(255, 0, 176) solid;
-  color: rgb(255, 0, 176)
+  color: rgb(255, 0, 176);
 }
 
 .bodyCopy {
@@ -302,13 +321,33 @@ footer {
   justify-content: space-between;
 }
 
-/*/////////// media queries ///////////*/
+/*/////////// copy success ///////////*/
+
+.copySuccess {
+  background: rgb(255, 0, 176);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  padding: 6px;
+  line-height: 12px;
+  letter-spacing: normal;
+  font-weight: 600;
+  font-size: 12px;
+  z-index: 100;
+  pointer-events: none;
+  border-radius: 2px;
+
+}
+
+
+
+/*/////////// mobile and small screens ///////////*/
 
 @media (max-width:900px) {
   .nameDescription {
     font-size: 2.5em;
     line-height: 1em;
-    /*padding: .75em 0;*/
   }
   #wrapper{
     width: 80%
@@ -316,22 +355,20 @@ footer {
 }
 
 /* mobile portrait */
-@media (max-width:650px) {
+@media screen and (max-width:650px) {
   #email, #phone {
-  /*#topContact {*/
     display: none;
+    pointer-events: none;
   }
   #topContact {
-    padding: 1em 0;
-    /*left:0;*/
-    /*position: fixed;*/
-    /*display: block;*/
-    /*border: thin white solid;*/
-    /*justify-content: space-around;*/
+    padding: .5em 0;
   }
   #flagContainer {
-    margin-top: 2.5em;
-    margin-bottom: 0;
+    margin-top: 2em;
+    margin-bottom: 0em;
+  }
+  .linkButtons{
+    width: 100%;
   }
   .card {
     width: 100%;
@@ -342,9 +379,6 @@ footer {
   }
   .logoImage {
     margin-bottom: 2em;
-  }
-  .links{
-    width: 100%;
   }
   .phoneStack {
     position: relative;
@@ -358,9 +392,6 @@ footer {
 
 /* mobile landscape */
 @media screen and (orientation:landscape) and (max-height:400px) {
-  #topContact {
-    /*display: none;*/
-  }
   #flagContainer {
     margin-top: -0.3em;
     margin-bottom: -2em;
@@ -369,7 +400,7 @@ footer {
     width: 100%;
     padding-bottom: 2em;
   }
-  .links{
+  .linkButtons{
     width: 100%;
   }
   .scrollhelper{
