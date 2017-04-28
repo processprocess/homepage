@@ -143,4 +143,3 @@ function render() {
   clothGeometry.verticesNeedUpdate = true;
   renderer.render( scene, camera );
 }
-
