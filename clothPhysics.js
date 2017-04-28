@@ -22,8 +22,6 @@ let clothFunction = plane( restDistance * xSegs, restDistance * ySegs );
 
 let cloth = new Cloth( xSegs, ySegs );
 
-let gravityForce = document.querySelector('.gravityForce');
-
 let max = 360;
 let speed = 0.0001;
 let num = 0;
@@ -36,7 +34,7 @@ let TIMESTEP_SQ = TIMESTEP * TIMESTEP;
 let pins = [];
 
 let ballPosition = new THREE.Vector3( 300, 300, 60 );
-let ballSize = 70; 
+let ballSize = 70;
 
 let tmpForce = new THREE.Vector3();
 
