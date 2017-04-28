@@ -71,20 +71,6 @@ a,
   color: rgb(255, 0, 176);
 }
 
-/*/////////// dissable hover on mobile ///////////*/
-
-@media (hover: none) {
-   .linkButton:hover {
-     border: thin #B8BBC5 solid;
-     color: #B8BBC5;
-   }
-   .navItem:hover,
-   .bodyCopy a:hover {
-     border-bottom: 1px solid #B8BBC5;
-     color: #B8BBC5;
-   }
-}
-
 #wrapper {
   margin: 0 auto;
   width: 780px;
@@ -321,6 +307,10 @@ footer {
   justify-content: space-between;
 }
 
+.footerLeft {
+  cursor: pointer;
+}
+
 /*/////////// copy success ///////////*/
 
 .copySuccess {
@@ -340,7 +330,19 @@ footer {
 
 }
 
+/*/////////// dissable hover on mobile ///////////*/
 
+@media (hover: none) {
+  .linkButton:hover {
+    border: thin #B8BBC5 solid;
+    color: #B8BBC5;
+  }
+  .navItem:hover,
+  .bodyCopy a:hover {
+    border-bottom: 1px solid #B8BBC5;
+    color: #B8BBC5;
+  }
+}
 
 /*/////////// mobile and small screens ///////////*/
 

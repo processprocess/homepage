@@ -5,16 +5,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/style1.css">
 		<meta property="og:title" content="Philip Bell, Visual Designer"/>
-		<meta property="og:image" content="http://philipbell.org/images/siteShot.jpg" />
+		<meta property="og:image" content="http://philipbell.org/images/siteShot.jpg"/>
 		<script src="libs/bodymovin.js"></script>
 	</head>
 	<body>
-
-		<!-- <div id='testButton'>test</div> -->
-
-		<!-- <div class="copySuccess">Phil's email copied to clipboard</div> -->
 
 		<div class="left scrollhelper"></div>
 		<div class="right scrollhelper"></div>
@@ -73,7 +69,7 @@
 				<img src="images/pictooptic/ipad-pictooptic3.jpg"></img>
 
 				<div class="bodyCopy">
-					Pictooptic presents icons in a Rorschach-esque reflection. By abstracting icons through reflection we activate free-association within our creative mind. Within a search for "green" we may see the face of a boar emerge from the abstracted pattern. The icons for "green" will include frogs and leafs. It will also include conceptually related icons such as cars and lightbulbs.
+					Pictooptic presents icons in a Rorschach-esque reflection. By abstracting icons through reflection we activate free-association within our creative mind. Within a search for "green" we may see the face of a boar emerge from the abstracted pattern. The icons for "green" will include frogs and leaves. It will also include conceptually related icons such as cars and lightbulbs.
 					<br><br>
 					These layers of abstraction stimulate passive creativity. It's subtly addictive like humming along to your favorite song.
 				</div>
@@ -100,7 +96,7 @@
 					Philip Bell
 				</div>
 				<div class="title">
-					Designer Programmer
+					Front-End Engineer
 				</div>
 				<div class="bodyCopy">
 
@@ -108,10 +104,10 @@
 					<br><br>
 					I hold a BFA from MICA in Graphic Design and I've enhanced this with workshops and courses including the Design Management class at Parsons and the Web Development Immersive program from General Assembly.
 					<br><br>
-					This combination of design-thinking, visual design and programming enables me to see projects holistically while building the details. I'm equally a thinker and a maker, with an emphasis on creation to push the needle foreward.
+					This combination of design-thinking, visual design and programming enables me to see projects holistically while building the details. I'm equally a thinker and a maker, with an emphasis on creation to push the needle forward.
 					<br><br>
 					Do you have an idea to build on?<br>
-					Lets build it together.
+					Let's build it together.
 					<br><br>
 					<a class="emailMe">Say Hello</a>
 
@@ -123,33 +119,25 @@
 			<div class="catchLine">Capabilities:</div>
 
 			<div id="cardsWrapper">
-				<div class="card" id="digital">
-					<div class="iconHolder" name="digital"></div>
-					<h3>Digital Design</h3>
-					<ul>
-						<li>illustrator</li>
-						<li>photoshop</li>
-						<li>inDesign</li>
-						<li>keynote</li>
-					</ul>
-				</div>
 				<div class="card" id="dev">
 					<div class="iconHolder" name="dev"></div>
 					<h3>Web Development</h3>
 					<ul>
 						<li>JavaScript ES6</li>
-						<li>Responsive Design</li>
 						<li>CSS3</li>
+						<li>HTML5</li>
+						<li>Responsive Mobile Design</li>
 					</ul>
 				</div>
 				<div class="card" id="tech">
 					<div class="iconHolder" name="tech"></div>
 					<h3>Web Technologies</h3>
 					<ul>
+						<li>React</li>
 						<li>Node.js</li>
+						<li>Pixi.js</li>
 						<li>A-Frame WebVR</li>
 						<li>Three.js</li>
-						<li>React</li>
 					</ul>
 				</div>
 				<div class="card" id="motion">
@@ -160,6 +148,16 @@
 						<li>CSS Animation</li>
 						<li>Web SVG Animation</li>
 						<li>Bodymovin</li>
+					</ul>
+				</div>
+				<div class="card" id="digital">
+					<div class="iconHolder" name="digital"></div>
+					<h3>Digital Design</h3>
+					<ul>
+						<li>Illustrator</li>
+						<li>Photoshop</li>
+						<li>InDesign</li>
+						<li>Keynote</li>
 					</ul>
 				</div>
 				<div class="card" id="threeD">
@@ -175,32 +173,32 @@
 			</div>
 
 			<footer>
-				<div id='footerLeft'>phil@philipbell.org</div>
+				<div class="footerLeft emailMe" id='email'>phil@philipbell.org</div>
 				<div id='footerRight'>(401) 473-8531</div>
 			</footer>
 
 		</div>
 		<script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
 		<script src="handleAnimation.js"></script>
+		<!-- <script src="lightSwitch.js"></script> -->
+		<script src="eventHandler.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
 		<script src="https://threejs.org/build/three.min.js"></script>
 		<script src="libs/Detector.js"></script>
 		<script src="clothPhysics.js"></script>
 		<script src="flag.js"></script>
 		<script src="flagMoveEvents.js"></script>
-		<script src="lightSwitch.js"></script>
-		<script src="eventHandler.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
 
 		<script>
-		  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			//
-		  // ga('create', 'UA-98123752-1', 'auto');
-		  // ga('send', 'pageview');
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-98123752-1', 'auto');
+		  ga('send', 'pageview');
 
 		</script>
 

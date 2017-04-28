@@ -126,8 +126,8 @@ function onWindowResize() {
 function animate() {
   requestAnimationFrame( animate );
   let time = Date.now();
-  windStrength = Math.cos( time / 7000 ) * 1 + 1;
-  windForce.set( Math.sin( time / 2000 ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) ).normalize().multiplyScalar( windStrength );
+  // windStrength = Math.cos( time / 7000 ) * 1 + 1;
+  // windForce.set( Math.sin( time / 2000 ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) ).normalize().multiplyScalar( windStrength );
   simulate( time );
   render();
 }
