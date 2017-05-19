@@ -1,6 +1,14 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const glob = require('glob');
+const fs = require('fs');
+
+const folderPath = glob.sync(__dirname + '/src/static/views');
+const pages = glob.sync(__dirname + '/src/static/views/*.ejs');
+
+// One bundle for each page
+// One bundle for type of page
 
 module.exports = {
   entry: './src/app.js',
@@ -16,8 +24,15 @@ module.exports = {
         use: ['babel-loader']
       }
       // {
-        // test: /\.(css)$/,
-        // loader: "file?name=[path][name].[ext]&context=./app/static"
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   use: [
+      //     'file-loader?name=images/[name].[ext]',
+      //     'image-webpack-loader'
+      //   ]
+      // }
+      // {
+      //   test: /\.(css)$/,
+      //   loader: "file?name=[path][name].[ext]&context=./app/static"
       // }
 
     ]
@@ -29,24 +44,25 @@ module.exports = {
     stats: 'errors-only'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'philipbell.org',
-      template: './src/static/views/index.ejs',
-      filename: 'index.html',
-      minify: {
-        collapseWhitespace: false
-      },
-      hash: true
-    }),
-    new HtmlWebpackPlugin({
-      title: 'test.org',
-      template: 'ejs-render-loader!./src/static/views/project.ejs',
-      filename: 'project.html',
-      minify: {
-        collapseWhitespace: false
-      },
-      hash: true
-    }),
+
+    ...(function(){
+      return ejsPages = pages.map(page => {
+        let fileName = page.split('/').pop().replace('.ejs', '.html')
+        let inject = true;
+        if(fileName !== 'index.html') inject = false
+        return new HtmlWebpackPlugin({
+          title: 'PB',
+          template: `ejs-render-loader!${page}`,
+          filename: fileName,
+          minify: {
+            collapseWhitespace: true
+          },
+          inject: inject,
+          hash: true
+        })
+      })
+    })(),
+
     new CopyWebpackPlugin([
       { from: './src/static/css', to: './css' }
     ]),
