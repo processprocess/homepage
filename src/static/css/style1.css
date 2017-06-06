@@ -356,6 +356,35 @@ footer {
 
 /*/////////// project Page ///////////*/
 
+#projWrapper {
+  margin: 0 auto;
+  width: 780px;
+}
+
+.projIntroWrapper {
+  width:50%;
+  /*border: thin white solid;*/
+  display:inline-block;
+}
+
+.projSketch {
+  border: thin white solid;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-self:flex-end;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+.projSketch img {
+  /*position: relative;
+  align-self:flex-end;*/
+  /*width: 40%;*/
+  /*display: inline-block;*/
+}
+
 .demoBox {
   margin-top: 14px;
   height: 45vw;
@@ -365,6 +394,7 @@ footer {
 
 .projTitleBox {
   margin-bottom: 40px;
+  display: inline-block;
 }
 
 .projHeader {
@@ -384,7 +414,7 @@ footer {
 .projLinkButtons {
   display:flex;
   margin-bottom: 40px;
-  width: 50%;
+  width: 100%;
 }
 
 .projLinkButton {
@@ -451,24 +481,24 @@ footer {
 
 /* --- proj cards --- */
 
-.projcard {
-  width: 50%;
+.projCard {
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.projcard h3 {
+.projCard h3 {
   font-weight: 400;
   letter-spacing: .5px;
   display: inline;
 }
 
-.projcard ul {
+.projCard ul {
   border-top: 1px solid #B8BBC5;
   padding: .6em 0 0 1em;
   margin:.6em 0;
 }
 
-.projcard li {
+.projCard li {
   padding-bottom: .5em;
   letter-spacing: .75px;
   font-weight: 300;
@@ -496,7 +526,8 @@ footer {
     font-size: 2.5em;
     line-height: 1em;
   }
-  #wrapper{
+  #wrapper,
+  #projWrapper {
     width: 80%
   }
 }
@@ -518,10 +549,12 @@ footer {
   .projLinkButtons {
     width: 100%;
   }
-  .card,
-  .projcard {
+  .card {
     width: 100%;
     padding-bottom: 2em;
+  }
+  .projIntroWrapper {
+    width: 100%;
   }
   .bannerRule {
    margin-bottom: 3em;
